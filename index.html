@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Love You</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #FFC0CB;
+            color: #ff5e78;
+            font-family: Arial, sans-serif;
+            font-size: 2em;
+            text-align: center;
+            overflow: hidden; /* Prevents scrollbars from showing */
+            margin: 0;
+        }
+
+        .scrolling-container {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .scrolling {
+            display: flex;
+            flex-direction: column;
+            animation: scroll 6s linear infinite; /* Fast scrolling */
+        }
+
+        .message {
+            margin-bottom: 20px; /* Space between messages */
+        }
+
+        /* Keyframes for the scrolling effect */
+        @keyframes scroll {
+            0% {
+                transform: translateY(100%); /* Start just below the screen */
+            }
+            100% {
+                transform: translateY(-100%); /* Scroll to the top, ending above the screen */
+            }
+        }
+
+        /* Ensure the messages always loop seamlessly */
+        .scrolling:after {
+            content: "";
+            display: block;
+            height: 100%; /* Ensures the second set starts immediately after the first one finishes */
+        }
+    </style>
+</head>
+<body>
+    <div class="scrolling-container">
+        <div class="scrolling">
+            <!-- First set of messages -->
+            <div class="message">I love you Varisha</div>
+            <div class="message">I love you Varisha</div>
+            <div class="message">I love you Varisha</div>
+            <div class="message">I love you Varisha</div>
+            <div class="message">I love you Varisha</div>
+            <div class="message">I love you Varisha</div>
+            
+            <!-- Duplicate set of messages for seamless scrolling -->
+            <div class="message">I love you Varisha</div>
+            <div class="message">I love you Varisha</div>
+            <div class="message">I love you Varisha</div>
+            <div class="message">I love you Varisha</div>
+            <div class="message">I love you Varisha</div>
+            <div class="message">I love you Varisha</div>
+        </div>
+    </div>
+</body>
+</html>
